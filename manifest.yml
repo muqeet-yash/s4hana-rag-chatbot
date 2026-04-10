@@ -1,0 +1,14 @@
+# manifest.yml
+applications:
+- name: s4hana-rag-chatbot
+  host: s4hana-rag-chatbot
+  port: 8080
+  # random-route: true
+  routes:
+  - route: https://yash-s4hana-rag-chatbot.cfapps.us10-001.hana.ondemand.com
+  path: ./
+  memory: 2048M
+  disk-quota: 2048M
+  buildpacks: 
+    - python_buildpack
+  command: python app.py
